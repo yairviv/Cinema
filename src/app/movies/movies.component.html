@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+    <div class="card-body">
+      <div class="container-fluid">
+        <div class="text-center">
+        </div>
+
+        <div class='row'>
+            <div class='col-md-2'>Filter by:</div>
+            <div class='col-md-1'>Name:</div>
+            <div class='col-md-2'>
+              <input type='text'
+              [(ngModel)]='MovieNameFilter' />
+            </div>    
+            <div class='col-md-1'>Year:</div>
+            <div class='col-md-2'>
+              <input type='text'
+              [(ngModel)]='MovieYearFilter' />
+            </div>        
+          </div>
+          <div class='row'>
+            <div class='col-md-6'>
+            </div>
+          </div>
+          <button class='btn btn-outline-dark'
+          (click)='SearchMovies()'>
+            Search
+          </button>
+          <button class='btn btn-outline-dark'
+          (click)='AddMovie()'>
+            Add Movie
+          </button>
+      <div>
+    <div *ngFor='let movie of filteredMovies '>
+        <div><pm-movie [imdbID]='movie.imdbID' [Title]='movie.Title' [Year]='movie.Year' [Poster]='movie.Poster' [filteredMovies]='filteredMovies'></pm-movie> </div>
+        <div>
+            <button class="btn btn-outline-dark" mat-raised-button (click)="SearchMovie(movie)">Edit Movie</button>
+            <button class="btn btn-outline-dark" mat-raised-button (click)="Delete(movie)">Delete Movie</button>
+          </div>
+    </div>
+</div>

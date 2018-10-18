@@ -6,18 +6,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   selector: 'pm-root',
   template:  `
   <div>
-    <h1>{{pageTitle}}</h1>
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container" style="margin-left: 30px">
+  <img src="./assets/images/favicon-96x96.jpg">
+    <h1 class="display-3" >{{pageTitle}} </h1>
+    <p class="lead">Movies inventory search engine and modifier.</p>
+  </div>
+</div>
   <pm-movies></pm-movies>
   </div>
   `
 })
 
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class AppComponent {
-  pageTitle: string = 'Cinema';
+  pageTitle: string = 'Herolo Cinema';
   constructor(private toast: ToastrService) {}
+
 
 
   showError() {
@@ -28,8 +37,8 @@ export class AppComponent {
     this.toast.success('','The Movie was saved');
   }
 
-  showInfo() {
-    this.toast.info('','The Movie was Deleted');
+  showInfo(text: string) {
+    this.toast.info('',text);
   }
 
 }

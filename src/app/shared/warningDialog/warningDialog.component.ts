@@ -26,7 +26,7 @@ import { AppComponent } from "../../app.component";
  }
 
  Delete(): void{ 
-    this.Appcomponent.showInfo();    
+    this.Appcomponent.showInfo('The Movie was Deleted');    
     let response= ["Delete"];
     this.dialogRef.close(response);
   }

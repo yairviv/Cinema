@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;">
     <img class="card-img-top" src= {{Poster}} alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">{{ Title }}</h5>
-      <p class="card-text">Year: {{ Year  }}</p>
+      <h5 class="card-title">{{ Title | titlecase | SymbolsRemovePipe }}</h5>
+      <p class="card-text">Year: {{ Year }}</p>
     </div>
   </div>

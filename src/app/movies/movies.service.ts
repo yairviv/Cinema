@@ -40,6 +40,7 @@ export class MovieService {
     );
   }
 
+  
   getMovieByName(name: string): Observable<IextendedMovie> {
     var movieUrl = 'http://www.omdbapi.com/?apikey=c31e96f3&t=';
     movieUrl += name;

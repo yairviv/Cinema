@@ -55,6 +55,7 @@ import { AppComponent } from "../../app.component";
      }
      else
      {
+        this.Appcomponent.showInfo('The Movie was Updated');   
         this.dialogRef.close();
      }
 }

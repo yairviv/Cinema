@@ -10,11 +10,14 @@ import { CommonModule } from '@angular/common';
 
 
 
+
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movies/movie.component';
-import { MovieDialogComponent } from './movies/movieDialog/moviedialog.component'
-import { warningDialogcomponent } from './shared/warningDialog/warningDialog.component'
+import { MovieDialogComponent } from './movies/movieDialog/moviedialog.component';
+import { warningDialogcomponent } from './shared/warningDialog/warningDialog.component';
+import {SymbolsRemovePipe} from '../app/shared/pipes/symbols.remove.pipe';
+
 
 
 
@@ -26,8 +29,9 @@ import { warningDialogcomponent } from './shared/warningDialog/warningDialog.com
     MovieComponent,
     MovieDialogComponent,
     warningDialogcomponent, 
+    SymbolsRemovePipe
+    
   ],
-
  imports: [
     BrowserModule,
     FormsModule,
@@ -36,6 +40,7 @@ import { warningDialogcomponent } from './shared/warningDialog/warningDialog.com
     CommonModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    
   ],
    entryComponents: [
       MovieDialogComponent,warningDialogcomponent,

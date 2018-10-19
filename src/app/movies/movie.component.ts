@@ -5,6 +5,8 @@ import {IextendedMovie} from '../movies/movie'
 import { MovieService } from "./movies.service";
 import { warningDialogcomponent } from "../shared/warningDialog/warningDialog.component";
 import {Imovie} from "./movie"
+import {SymbolsRemovePipe} from '../shared/pipes/symbols.remove.pipe';
+
 
 
 @Component({

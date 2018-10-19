@@ -6,6 +6,7 @@ export class Imovie {
     Poster: string;
   }
 
+  
   export class IextendedMovie {
     Title: string;
     Year: string;

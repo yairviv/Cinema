@@ -11,3 +11,18 @@ mat-form-field {
     padding-bottom: 50px;
     padding-left: 0px;
 }
+
+input{
+    width: 100%;
+}
+
+.my-row{
+    padding-bottom: 25px;
+}
+
+.alert{
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    position: absolute;
+}

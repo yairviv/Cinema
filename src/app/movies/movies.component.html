@@ -1,43 +1,30 @@
-<div class="card">
-    <div class="card-header">
-      {{pageTitle}}
-    </div>
-    <div class="card-body">
-      <div class="container-fluid">
-        <div class="text-center">
-        </div>
+<a class="btn btn-primary btn-lg" style="margin-left: 30px" (click)="AddMovie()"> Add Movie</a>
 
-        <div class='row'>
-            <div class='col-md-2'>Filter by:</div>
-            <div class='col-md-1'>Name:</div>
-            <div class='col-md-2'>
-              <input type='text'
+<div class="user-actions">
+  
+        <div>
+           <label>Filter by:</label>
+            <label style="margin-left: 10px">Name:</label>
+              <input type='text' style="margin-left: 10px" 
               [(ngModel)]='MovieNameFilter' />
-            </div>    
-            <div class='col-md-1'>Year:</div>
-            <div class='col-md-2'>
-              <input type='text'
-              [(ngModel)]='MovieYearFilter' />
-            </div>        
-          </div>
-          <div class='row'>
-            <div class='col-md-6'>
-            </div>
-          </div>
-          <button class='btn btn-outline-dark'
+              <label style="margin-left: 10px">Year:</label>          
+              <input type='text' style="margin-left: 10px"
+              [(ngModel)]='MovieYearFilter' />                   
+         
+          <button class='btn btn-outline-dark' style="margin-left: 10px"
           (click)='SearchMovies()'>
             Search
           </button>
-          <button class='btn btn-outline-dark'
-          (click)='AddMovie()'>
-            Add Movie
-          </button>
-      <div>
-    <div *ngFor='let movie of filteredMovies '>
-        <div><pm-movie [imdbID]='movie.imdbID' [Title]='movie.Title' [Year]='movie.Year' [Poster]='movie.Poster' [filteredMovies]='filteredMovies'></pm-movie> </div>
-        <div>
-            <button class="btn btn-outline-dark" mat-raised-button (click)="SearchMovie(movie)">Edit Movie</button>
-            <button class="btn btn-outline-dark" mat-raised-button (click)="Delete(movie)">Delete Movie</button>
-          </div>
+        </div>
+
+
+        </div>
+      <div class="movieCardWrapper" >
+        <div *ngFor='let movie of filteredMovies ' class="movieCard">
+            <div><pm-movie [imdbID]='movie.imdbID' [Title]='movie.Title' [Year]='movie.Year' [Poster]='movie.Poster' [filteredMovies]='filteredMovies'></pm-movie> </div>
+            <div>
+                <button class="btn btn-outline-dark" mat-raised-button (click)="SearchMovie(movie)">Edit Movie</button>
+                <button class="btn btn-outline-dark" mat-raised-button (click)="Delete(movie)">Delete Movie</button>
+              </div>
+        </div>
     </div>
-</div>

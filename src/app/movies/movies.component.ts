@@ -37,7 +37,6 @@ constructor(private movieService: MovieService ,public dialog: MatDialog, privat
 }
 
 
-
 onmovieDeleted(message: string): void {
     this.pageTitle + message;
    }
@@ -166,6 +165,7 @@ Delete(movie: Imovie): void{
             newMovie.Type=IextendedMovie.Type;
             newMovie.Year = IextendedMovie.Year;
 
+            
             this.movieService.getMovieByName(newMovie.Title).subscribe(
                 model =>{
                     if(!model.Title)

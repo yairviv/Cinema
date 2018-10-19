@@ -27,6 +27,7 @@ export class AppComponent {
   constructor(private toast: ToastrService) {}
 
 
+  
 
   showError() {
     this.toast.error('Movie already exist','Movie save blocked!');
